@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "concurrently \"node ./bookService/bin/www\"",
+    "devStart": "concurrently \"nodemon ./bookService/bin/www\"",
+    "test":"concurrently \"npm test --prefix ./bookService\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
