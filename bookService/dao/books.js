@@ -59,7 +59,7 @@ exports.post_book = (books) => {
                 console.log('JSON data is written to the file successfully')
             }
         })
-        return toys;
+        return books;
     }
     return null;
 }
