@@ -8,12 +8,14 @@ AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   });
 
+ 
+
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 
-const jsonData = [
+const jsonData =[
     {
-      "productId": "BB1",
+      "productId": 8001,
       "productName": "The Lord of the Rings",
       "price": 25.99,
       "productDescription": "The Lord of the Rings is a high-fantasy epic novel written by English author and scholar J.R.R. Tolkien. It is one of the most renowned works in the fantasy genre, set in the fictional world of Middle-earth.",
@@ -25,7 +27,7 @@ const jsonData = [
       "language":"English"
     },
     {
-      "productId": "BB2",
+      "productId": 8002,
       "productName": "The Enigmatic Chronicles",
       "price": 29.99,
       "productDescription": "The Enigmatic Chronicles is a thrilling fantasy novel that follows the journey of a young hero destined to save the world from ancient evil. With unexpected plot twists and a vividly imagined world, readers will be captivated from beginning to end.",
@@ -37,7 +39,7 @@ const jsonData = [
       "language": "English"
     },
     {
-      "productId": "BB3",
+      "productId": 8003,
       "productName": "Echoes of Silence",
       "price": 24.99,
       "productDescription": "Echoes of Silence is a deeply moving novel exploring love, loss, and the human spirit. The poetic narrative weaves a poignant story of interconnected lives and the universal quest for meaning in a complex world.",
@@ -49,7 +51,7 @@ const jsonData = [
       "language": "English"
     },
     {
-        "productId": "BB4",
+        "productId": 8004,
         "productName": "To Kill a Mockingbird",
         "price": 12.99,
         "productDescription": "To Kill a Mockingbird is a classic novel written by Harper Lee. The story explores themes of racial injustice, moral growth, and compassion through the eyes of young Scout Finch in the American South.",
@@ -61,7 +63,7 @@ const jsonData = [
         "language": "English"
       },
       {
-        "productId": "BB5",
+        "productId": 8010,
         "productName": "Serenity Within Chaos",
         "price": 22.99,
         "productDescription": "Serenity Within Chaos is a compelling drama that navigates the complexities of relationships, resilience, and personal growth. Through authentic characters and emotional depth, it explores the human ability to find peace amidst life’s turmoil.",
@@ -73,7 +75,7 @@ const jsonData = [
         "language": "English"
       },
       {
-        "productId": "BB6",
+        "productId": 8005,
         "productName": "The Art of Time Travel",
         "price": 27.99,
         "productDescription": "The Art of Time Travel is a thought-provoking non-fiction book that delves into the history and philosophy of time travel concepts. It explores the evolution of time travel ideas and their impact on literature, science, and popular culture.",
@@ -85,7 +87,7 @@ const jsonData = [
         "language": "English"
       },
       {
-      "productId": "BB7",
+      "productId": 8006,
       "productName": "Emerald Whispers: Tales of Ireland",
       "price": 21.99,
       "productDescription": "Emerald Whispers: Tales of Ireland is a collection of enchanting stories that showcase the beauty and magic of Ireland. From ancient legends to modern-day adventures, readers will be transported to the lush landscapes and rich culture of the Emerald Isle.",
@@ -97,7 +99,7 @@ const jsonData = [
       "language": "English"
     },
     {
-      "productId": "BB8",
+      "productId": 8007,
       "productName": "Celtic Mysteries: Unveiling Ireland's Secrets",
       "price": 18.99,
       "productDescription": "Celtic Mysteries: Unveiling Ireland's Secrets is a captivating exploration of ancient Irish folklore and mysteries. Delve into the hidden world of Celtic legends, mythical creatures, and ancient rituals that have shaped Ireland's cultural identity throughout the ages.",
@@ -109,7 +111,7 @@ const jsonData = [
       "language": "English"
     },
     {
-        "productId": "ISBN-8170283442",
+        "productId": 8008,
         "productName": "Madhushala",
         "price": 162.00,
         "productDescription": "Madhushala, as a work, contributed highly to 20th-century Hindi literature. Madhushala is one of the books of a trio by Harivansh Rai Bachchan. It contains 135 Rubai, which verses of four lines.",
@@ -120,7 +122,7 @@ const jsonData = [
         "format": "Hardcover",
         "language": "Hindi"
       },{
-          "productId": "ISBN-8171826254",
+          "productId": 8009,
         "productName": "Chanakya Neeti",
         "price": 122.00,
         "productDescription": "Chanakya Neeti is a book based on Chanakya, an Indian theorist, teacher, philosopher, economist and a noble mentor to the Mauryan emperors between 350 -275 BC. The book portrays about his ideologies and ideas in diverse situations.",
@@ -131,9 +133,11 @@ const jsonData = [
         "format": "Hardcover",
         "language": "Hindi"
       }
-      ];
+      ]
+
 // DynamoDB table name
 const tableName = 'fz_books';
+
 
 // Function to upload data to DynamoDB
 function uploadToDynamoDB(item, callback) {
@@ -142,6 +146,8 @@ function uploadToDynamoDB(item, callback) {
     Item: item,
   };
 
+ 
+
   docClient.put(params, (err, data) => {
     if (err) {
       console.error('Error:', err);
@@ -149,9 +155,13 @@ function uploadToDynamoDB(item, callback) {
       console.log('Uploaded:', item.productId);
     }
 
+ 
+
     callback(err, data);
   });
 }
+
+ 
 
 // Use the async library to upload the data in parallel
 async.each(
