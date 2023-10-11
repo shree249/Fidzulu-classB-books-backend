@@ -23,13 +23,16 @@ describe("Books server  endpoint tests", function () {
       server.close(done); // Shutdown the server after tests are complete
     });
     
-    describe("GET /books/US-NC", () => {
+    describe("checking status code for GET/books/all//US-NC", () => {
         it("returns status code 200",  (done) => {
             request.get(books_url, (error, response, body) => {
                 expect(response.statusCode).toBe(200);
                 done();
             });
         });
+    });
+
+    describe("checking price for GET /books/all/US-NC ", () => {
         it("contains price", (done) => {
             request.get(books_url, (error, response, body) => {
                 expect(body).toBeTruthy();
@@ -38,8 +41,9 @@ describe("Books server  endpoint tests", function () {
             });
         });
     });
+
     // test for wrong path and expect 404
-    describe("GET /books/", () => {
+    describe("GET /books/all/", () => {
         it("returns status code 404",  (done) => {
             request.get(not_found_url, (error, response, body) => {
                 expect(response.statusCode).toBe(404);
@@ -47,7 +51,9 @@ describe("Books server  endpoint tests", function () {
             });
         });
     });
-    describe("GET /books/China", () => {
+
+
+    describe("GET /books/all/China", () => {
         it("returns status code 404",  (done) => {
             request.get(not_found_url + "China", (error, response, body) => {
                 expect(response.statusCode).toBe(404);

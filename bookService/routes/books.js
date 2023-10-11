@@ -17,7 +17,7 @@ router.get('/team', function(req, res, next) {
   }
 });
 
-router.get('/:location',async function(req, res, next) {
+router.get('/all/:location',async function(req, res, next) {
   const param = req.params.location;
   console.log('got into books/:location ' + param);
 

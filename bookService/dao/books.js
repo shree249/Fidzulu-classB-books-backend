@@ -1,10 +1,17 @@
 
 const path= require('path');
 const rootPath= path.resolve(__dirname, '../../');
-// const filepath=path.join(rootPath, 'resources/Bookjson.json');
+const filepath=path.join(rootPath, 'resources/Bookjson.json');
 const fs = require('fs');
 const getAllDataFromDynamoDB = require('./daoImpl');
 
+let read_json_file = () =>{
+    return fs.readFileSync(filepath);
+}
+
+exports.list = () =>{
+    return JSON.parse(read_json_file());
+}
 
 
 exports.query_by_arg = async(value) =>{
@@ -33,8 +40,9 @@ exports.query_by_arg = async(value) =>{
     });
     return results;
   } catch (error) {
+    console.log("From json");
     console.error('Error querying data from DynamoDB:', error);
-    return null;
+    return this.query_by_arg_json(value);
   }
 }
 
@@ -54,6 +62,34 @@ exports.post_book = (books) => {
         return toys;
     }
     return null;
+}
+
+exports.query_by_arg_json = (value) =>{
+    if(value !== "US-NC" && value!=="IE" && value!="IN"){
+        return null;
+    }
+    let results = JSON.parse(read_json_file());
+    console.log("Query by location" + value);
+    console.log(results);
+    for(let i =0; i < results.length; i++){
+        console.log("CHECKING PRIZE",results[i].price);
+        if(value === "US-NC"){
+            results[i].price *= 1.08;
+        }else if(value === "IE"){
+            results[i].price *= 1.23;
+            results[i].price*=0.95;
+        }else if(value === "IN"){
+            results[i].price *= 1.18;
+            results[i].price*=83.00;
+
+        }
+        results[i].price=Math.round((results[i].price + Number.EPSILON) * 100) / 100
+        // results[i].price = Double(results[i].price.toFixed(2));
+       // results[i].price = results[i].price.toFixed(2); 
+        // console.log("UPDATING PRIZE",results[i].price);
+    }
+    // console.log(results);
+    return results;
 }
 
 exports.reset_json = (content) => {
