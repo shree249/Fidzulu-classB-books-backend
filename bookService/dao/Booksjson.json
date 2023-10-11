@@ -1,0 +1,121 @@
+[
+  {
+    "productId": "ISBN-9780618640157",
+    "productName": "The Lord of the Rings",
+    "price": 25.99,
+    "productDescription": "The Lord of the Rings is a high-fantasy epic novel written by English author and scholar J.R.R. Tolkien. It is one of the most renowned works in the fantasy genre, set in the fictional world of Middle-earth.",
+    "rating": 4.8,
+    "imageUrl": "https://example.com/lord-of-the-rings.jpg",
+    "author": "J.R.R. Tolkien",
+    "publisher": "Houghton Mifflin Harcourt",
+    "format": "Hardcover",
+    "language":"English"
+  },
+  {
+    "productId": "ISBN-1234567890",
+    "productName": "The Enigmatic Chronicles",
+    "price": 29.99,
+    "productDescription": "The Enigmatic Chronicles is a thrilling fantasy novel that follows the journey of a young hero destined to save the world from ancient evil. With unexpected plot twists and a vividly imagined world, readers will be captivated from beginning to end.",
+    "rating": 4.9,
+    "imageUrl": "https://example.com/enigmatic-chronicles.jpg",
+    "author": "A. R. Writer",
+    "publisher": "Fantasy Press",
+    "format": "Hardcover",
+    "language": "English"
+  },
+  {
+    "productId": "ISBN-2345678901",
+    "productName": "Echoes of Silence",
+    "price": 24.99,
+    "productDescription": "Echoes of Silence is a deeply moving novel exploring love, loss, and the human spirit. The poetic narrative weaves a poignant story of interconnected lives and the universal quest for meaning in a complex world.",
+    "rating": 4.8,
+    "imageUrl": "https://example.com/echoes-of-silence.jpg",
+    "author": "S.. M. Poet",
+    "publisher": "Verse Publications",
+    "format": "Paperback",
+    "language": "English"
+  },
+  {
+      "productId": "ISBN-9780061120084",
+      "productName": "To Kill a Mockingbird",
+      "price": 12.99,
+      "productDescription": "To Kill a Mockingbird is a classic novel written by Harper Lee. The story explores themes of racial injustice, moral growth, and compassion through the eyes of young Scout Finch in the American South.",
+      "rating": 4.7,
+      "imageUrl": "https://example.com/to-kill-a-mockingbird.jpg",
+      "author": "Harper Lee",
+      "publisher": "Harper Perennial Modern Classics",
+      "format": "Paperback",
+      "language": "English"
+    },
+    {
+      "productId": "ISBN-5678901234",
+      "productName": "Serenity Within Chaos",
+      "price": 22.99,
+      "productDescription": "Serenity Within Chaos is a compelling drama that navigates the complexities of relationships, resilience, and personal growth. Through authentic characters and emotional depth, it explores the human ability to find peace amidst life’s turmoil.",
+      "rating": 4.6,
+      "imageUrl": "https://example.com/serenity-within-chaos.jpg",
+      "author": "L. R. Dramatist",
+      "publisher": "Drama House",
+      "format": "Paperback",
+      "language": "English"
+    },
+    {
+      "productId": "ISBN-4567890123",
+      "productName": "The Art of Time Travel",
+      "price": 27.99,
+      "productDescription": "The Art of Time Travel is a thought-provoking non-fiction book that delves into the history and philosophy of time travel concepts. It explores the evolution of time travel ideas and their impact on literature, science, and popular culture.",
+      "rating": 4.7,
+      "imageUrl": "https://example.com/art-of-time-travel.jpg",
+      "author": "T. H. Historian",
+      "publisher": "Temporal Books",
+      "format": "Hardcover",
+      "language": "English"
+    },
+    {
+    "productId": "ISBN-9876543210",
+    "productName": "Emerald Whispers: Tales of Ireland",
+    "price": 21.99,
+    "productDescription": "Emerald Whispers: Tales of Ireland is a collection of enchanting stories that showcase the beauty and magic of Ireland. From ancient legends to modern-day adventures, readers will be transported to the lush landscapes and rich culture of the Emerald Isle.",
+    "rating": 4.6,
+    "imageUrl": "https://example.com/emerald-whispers.jpg",
+    "author": "Siobhán O'Connor",
+    "publisher": "Celtic Press",
+    "format": "Paperback",
+    "language": "English"
+  },
+  {
+    "productId": "ISBN-0123456789",
+    "productName": "Celtic Mysteries: Unveiling Ireland's Secrets",
+    "price": 18.99,
+    "productDescription": "Celtic Mysteries: Unveiling Ireland's Secrets is a captivating exploration of ancient Irish folklore and mysteries. Delve into the hidden world of Celtic legends, mythical creatures, and ancient rituals that have shaped Ireland's cultural identity throughout the ages.",
+    "rating": 4.7,
+    "imageUrl": "https://example.com/celtic-mysteries.jpg",
+    "author": "Eoin O'Sullivan",
+    "publisher": "Irish Heritage Publishing",
+    "format": "Hardcover",
+    "language": "English"
+  },
+  {
+      "productId": "ISBN-8170283442",
+      "productName": "Madhushala",
+      "price": 162.00,
+      "productDescription": "Madhushala, as a work, contributed highly to 20th-century Hindi literature. Madhushala is one of the books of a trio by Harivansh Rai Bachchan. It contains 135 Rubai, which verses of four lines.",
+      "rating": 4.5,
+      "imageUrl": "https://example.com/madhushala.jpg",
+      "author": "Harivansh Rai Bachchan",
+      "publisher": "Rajpal & Sons",
+      "format": "Hardcover",
+      "language": "Hindi"
+    },{
+        "productId": "ISBN-8171826254",
+      "productName": "Chanakya Neeti",
+      "price": 122.00,
+      "productDescription": "Chanakya Neeti is a book based on Chanakya, an Indian theorist, teacher, philosopher, economist and a noble mentor to the Mauryan emperors between 350 -275 BC. The book portrays about his ideologies and ideas in diverse situations.",
+      "rating": 4.4,
+      "imageUrl": "https://example.com/chanakya-neeti.jpg",
+      "author": "Ashwini Parashar",
+      "publisher": "Diamond Pocket Books",
+      "format": "Hardcover",
+      "language": "Hindi"
+    }
+    ]
