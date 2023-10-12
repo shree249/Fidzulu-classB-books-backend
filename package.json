@@ -6,6 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
+    "clnI": "npm install && for dir in bookService; do (cd $dir && npm install); done",
     "start": "concurrently \"node ./bookService/bin/www\"",
     "devStart": "concurrently \"nodemon ./bookService/bin/www\"",
     "test": "concurrently \"npm test --prefix ./bookService\""
