@@ -8,10 +8,13 @@
   "scripts": {
     "start": "concurrently \"node ./bookService/bin/www\"",
     "devStart": "concurrently \"nodemon ./bookService/bin/www\"",
-    "test":"concurrently \"npm test --prefix ./bookService\""
+    "test": "concurrently \"npm test --prefix ./bookService\""
   },
   "dependencies": {
-    "concurrently": "^8.2.1"
+    "concurrently": "^8.2.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "jasmine": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
