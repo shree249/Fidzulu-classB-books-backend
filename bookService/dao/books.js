@@ -1,8 +1,8 @@
 
 const path= require('path');
-const rootPath= path.resolve(__dirname, '../../');
-const filepath=path.join(rootPath, 'resources/Bookjson.json');
+// const rootPath= path.resolve(__dirname, '../../');
 const fs = require('fs');
+const filepath=path.resolve('./resources/Bookjson.json');
 const getAllDataFromDynamoDB = require('./daoImpl');
 
 let read_json_file = () =>{
@@ -30,12 +30,12 @@ exports.query_by_arg = async(value) =>{
             resultItem.price *= 1.08;
         }else if(value === "IE"){
             resultItem.price *= 1.23;
-            resultItem.price*=0.95;
+            resultItem.price*=0.94;
         }else if(value === "IN"){
             resultItem.price *= 1.18;
             resultItem.price*=83.00;
         }
-        resultItem.price=Math.round((resultItem.price + Number.EPSILON) * 100) / 100 ;
+        resultItem.price=parseFloat(resultItem.price.toFixed(2));
       return resultItem;
     });
     return results;
@@ -83,7 +83,8 @@ exports.query_by_arg_json = (value) =>{
             results[i].price*=83.00;
 
         }
-        results[i].price=Math.round((results[i].price + Number.EPSILON) * 100) / 100
+
+        results[i].price=parseFloat(results[i].price.toFixed(2));
         // results[i].price = Double(results[i].price.toFixed(2));
        // results[i].price = results[i].price.toFixed(2); 
         // console.log("UPDATING PRIZE",results[i].price);

@@ -113,7 +113,7 @@ const jsonData =[
     {
         "productId": 8008,
         "productName": "Madhushala",
-        "price": 162.00,
+        "price": 174.96,
         "productDescription": "Madhushala, as a work, contributed highly to 20th-century Hindi literature. Madhushala is one of the books of a trio by Harivansh Rai Bachchan. It contains 135 Rubai, which verses of four lines.",
         "rating": 4.5,
         "imageUrl": "https://m.media-amazon.com/images/I/71VVm4pMYvL._AC_UY218_.jpg",

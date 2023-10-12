@@ -13,7 +13,7 @@ describe("Unit tests on books module", () => {
         it("with location Ireland",async () => {
             let results = await books.query_by_arg("IE");
             expect(results[0].price).toBeGreaterThan(-1);
-            expect(results[0].price.toString()).toMatch(/^\d+\.\d{1}$/);
+            expect(results[0].price.toString()).toMatch(/^\d+\.\d{1,2}$/);
 
 
         });
